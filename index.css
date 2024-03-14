@@ -1,0 +1,104 @@
+:root{
+    --wid:1280px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg,blue,red);
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    display: block;
+    background-color: rgb(255, 255, 255);
+    border: 0 solid black;
+    border-radius: calc(0.0178*var(--wid));
+    width: calc(0.30*var(--wid));;
+    padding: calc(0.015*var(--wid));
+    margin:calc(0.01*var(--wid)) 0;
+}
+h2{
+    margin: calc(0.01*var(--wid)) 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    border-radius: calc(0.015*var(--wid));
+    margin-bottom: calc(0.01*var(--wid));
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: calc(0.3*var(--wid));
+    height: calc(0.0278*var(--wid));
+    padding-left: calc(0.0078*var(--wid));
+}
+.button{
+    position: flex;
+    text-align: center;
+}
+.btn{
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    border-radius: calc(0.015*var(--wid));
+    text-align: center;
+    width: calc(0.0578*var(--wid));
+    height: calc(0.0278*var(--wid));
+    font-size: larger;
+}
+.btn-add{
+    background-color: green;
+    color: white;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    padding: 0 0 calc(0.0078*var(--wid)) calc(0.02*var(--wid));
+    cursor: pointer;
+}
+ul li::before{
+    content: '';
+    border: calc(0.001*var(--wid)) solid black;
+    position:absolute;
+    width: calc(0.012*var(--wid));
+    height: calc(0.012*var(--wid));
+    border-radius: 50%;
+    left:0;
+    background-size: cover;
+}
+ul .checked{
+    text-decoration: line-through;
+}
+ul .checked::before{
+    background-color: rgb(19, 69, 234);
+}
+ul .checked::after{
+    content: '';
+    border: calc(0.001*var(--wid)) solid transparent;
+    position:absolute;
+    width: calc(0.006*var(--wid));
+    height: calc(0.006*var(--wid));
+    border-radius: 50%;
+    top:calc(0.003*var(--wid));
+    left:calc(0.003*var(--wid));
+    background-size: cover;
+    background-color: #f0f8ff;
+}
+ul li span{
+    text-decoration: none;
+    position: absolute;
+    right: calc(0.0078*var(--wid));
+}
+.btn-clear{
+    width: calc(0.092*var(--wid));
+    background-color: red;
+}
