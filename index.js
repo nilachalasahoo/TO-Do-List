@@ -10,8 +10,9 @@ add.addEventListener('click',(event)=>{
     let x=inp.value;
     inp.value="";
     for(i of x){
-        if(i===' ')
-            x=x.substring(1);
+        if(i!==' ')
+            break;
+        x=x.substring(1);
     }
     if(x!=""){
         const li=document.createElement('li');
